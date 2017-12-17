@@ -8,7 +8,7 @@ SET SAVESTAMP=%DATE:/=_%
 echo %DATE%-%TIME% - Starting downloads cleaup > %log%download_cleanup_%SAVESTAMP%.log
 
 :: move all old files into archive folder
-robocopy %download% %download%archive_%SAVESTAMP% /move /minlad:30 >> %log%download_cleanup_%SAVESTAMP%.log
+robocopy %download% %download%archive_%SAVESTAMP% /move /minlad:30 /s /e >> %log%download_cleanup_%SAVESTAMP%.log
 
 "C:\Program Files\7-Zip\7z.exe" a %download%download_archive_%SAVESTAMP%.7z %download%archive_%SAVESTAMP%\ -r >> %log%download_cleanup_%SAVESTAMP%.log
 ::forfiles -p %downloads_path% -s -m *.* /D -30 /C ::"cmd /c del @path"
