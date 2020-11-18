@@ -12,6 +12,6 @@ loop
     ControlSend, , r, ahk_exe Raid.exe
     WinActivate, %Title%
  
-sleep, 5000
+sleep, 60000
 }
 return
