@@ -7,8 +7,8 @@ $Packages = 'googlechrome',
 'microsoft-edge-insider-dev', 
 'adobereader', 
 'parsec', 
-'microsoft-windows-terminal'
-
+'microsoft-windows-terminal',
+'gh'
 
 # choco upgrade all
 
