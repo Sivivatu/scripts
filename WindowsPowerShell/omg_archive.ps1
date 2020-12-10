@@ -16,10 +16,7 @@ $screenshots_archive = Join-Path $OMG_base -ChildPath "screenshots.zip"
 
 Compress-Archive -Path $OMG_screenshots_dated -Update -DestinationPath $screenshots_archive
 
-# $screenshots_archive = Join-Path $OMG_base -ChildPath "screenshots_2.7z"
-# $zipfilename = 'c:\cwRsync\backup.zip'
-# $file = 'c:\cwRsync\backup.log'
-# set-content $zipfilename ("PK" + [char]5 + [char]6 + ("$([char]0)" * 18))
-# (dir $zipfilename).IsReadOnly = $false
-# $zipfile = (New-Object -ComObject shell.application).NameSpace($zipfilename)
-# $zipfile.MoveHere($file.FullName)
+Move-Item $OMG_screenshots_dated "C:\"
+$DELETE = Join-Path "C:\" $archive_date
+# Remove-Item $nonOnedrivePath\$subFolder -Recurse -Force
+Remove-Item -LiteralPath $DELETE -Force -Recurse
