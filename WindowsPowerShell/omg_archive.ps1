@@ -2,7 +2,7 @@ $archive_date = Get-Date -Format "yyyy-MM-dd"
 
 $OMG_base = "C:\Users\paulj\OneDrive\Documents\scripts\OMGClick"
 
-$OMG_folder = "OMGclick 4.0.2"
+$OMG_folder = "OMGclick 4.0.4"
 $OMG_screenshots = Join-Path  $OMG_base -ChildPath $OMG_folder | Join-Path -ChildPath "screenshots"
 $OMG_screenshots_dated = Join-Path $OMG_screenshots -ChildPath $archive_date
 Write-Output $OMG_screenshots
