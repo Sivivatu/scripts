@@ -1,14 +1,30 @@
 $Packages = 'googlechrome', 
+# 'microsoft-edge-insider-dev',
+'microsoft-edge',
+# Code tools
 'git', 
 'vscode', 
+'gh',
+'microsoft-windows-terminal',
+'powershell-core',
+'powershell-preview',
+# utilities
 'teracopy', 
 'webp', 
-'7zip.install', 
-'microsoft-edge-insider-dev', 
+'7zip.install',
+'google-drive-file-stream', 
+'powertoys',
 'adobereader', 
-'parsec', 
-'microsoft-windows-terminal',
-'gh'
+'rescuetime',
+'mobaXterm',
+'whatsapp',
+'zoom',
+'filebot',
+'sdio',
+# Gaming tools
+'parsec', #needed? Replace use with Guac?
+'discord',
+'steam'
 
 # choco upgrade all
 
