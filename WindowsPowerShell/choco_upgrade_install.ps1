@@ -21,6 +21,7 @@ $Packages = 'googlechrome',
 'zoom',
 'filebot',
 'sdio',
+'pia',
 # Gaming tools
 'parsec', #needed? Replace use with Guac?
 'discord',
