@@ -12,7 +12,6 @@ $Packages = 'googlechrome',
 'teracopy', 
 'webp', 
 '7zip.install',
-'google-drive-file-stream', 
 'powertoys',
 'adobereader', 
 'rescuetime',
@@ -25,10 +24,23 @@ $Packages = 'googlechrome',
 # Gaming tools
 'parsec', #needed? Replace use with Guac?
 'discord',
-'steam'
+'steam',
+'msiafterburner',
+'autohotkey',
+'obs-studio'
 
 # choco upgrade all
 
 ForEach ($PackageName in $Packages) {
+    choco upgrade $PackageName -y
+}
+
+$uninstall_update = 'google-drive-file-stream'
+
+ForEach ($PackageName in $uninstall_update) {
+    choco upgrade $PackageName -y
+}
+
+ForEach ($PackageName in $uninstall_update) {
     choco upgrade $PackageName -y
 }
