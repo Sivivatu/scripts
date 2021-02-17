@@ -21,6 +21,7 @@ $Packages = 'googlechrome',
 'filebot',
 'sdio',
 'pia',
+# 'fileseek', # possible future file searching option. wanted on 17 Feb 2021
 # Gaming tools
 'parsec', #needed? Replace use with Guac?
 'discord',
