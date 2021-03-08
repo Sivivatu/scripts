@@ -5,9 +5,11 @@ $Packages = 'googlechrome',
 'git', 
 'vscode', 
 'gh',
+'github-desktop',
 'microsoft-windows-terminal',
 'powershell-core',
 'powershell-preview',
+'awscli',
 # utilities
 'teracopy', 
 'webp', 
@@ -36,10 +38,10 @@ ForEach ($PackageName in $Packages) {
     choco upgrade $PackageName -y
 }
 
-$uninstall_update = 'google-drive-file-stream'
+$uninstall_update = 'google-drive-file-stream', 'vscode'
 
 ForEach ($PackageName in $uninstall_update) {
-    choco upgrade $PackageName -y
+    choco uninstall $PackageName -y
 }
 
 ForEach ($PackageName in $uninstall_update) {
