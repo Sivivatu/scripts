@@ -1,8 +1,8 @@
 $archive_date = Get-Date -Format "yyyy-MM-dd"
 
 $OMG_base = "C:\Users\paulj\OneDrive\Documents\scripts\OMGClick"
-
 $OMG_folder = "OMGclick 4.0.4"
+
 $OMG_screenshots = Join-Path  $OMG_base -ChildPath $OMG_folder | Join-Path -ChildPath "screenshots"
 $OMG_screenshots_dated = Join-Path $OMG_screenshots -ChildPath $archive_date
 Write-Output $OMG_screenshots
@@ -20,3 +20,8 @@ Move-Item $OMG_screenshots_dated "C:\"
 $DELETE = Join-Path "C:\" $archive_date
 # Remove-Item $nonOnedrivePath\$subFolder -Recurse -Force
 Remove-Item -LiteralPath $DELETE -Force -Recurse
+
+# update log of screenshots archive
+$OMG_screenshots_output = Join-Path $OMG_base -ChildPath "screenshots.txt"
+# Expand-Archive -Path $screenshots_archive -DestinationPath $OMG_output -PassThru -WhatIf
+& 'C:\Program Files\7-Zip\7z.exe' l $screenshots_archive > $OMG_screenshots_output
