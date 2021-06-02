@@ -2,6 +2,7 @@ $Packages = 'googlechrome',
 # 'microsoft-edge-insider-dev',
 'microsoft-edge',
 # Code tools
+'python',
 'git', 
 'vscode', 
 'gh',
@@ -10,7 +11,9 @@ $Packages = 'googlechrome',
 'powershell-core',
 'powershell-preview',
 'awscli',
+'dbeaver',
 # utilities
+'zoomit',
 'teracopy', 
 'webp', 
 '7zip.install',
@@ -23,12 +26,10 @@ $Packages = 'googlechrome',
 'filebot',
 'sdio',
 'pia',
-# 'fileseek', # possible future file searching option. wanted on 17 Feb 2021
+'fileseek',
 # Gaming tools
-'parsec', #needed? Replace use with Guac?
 'discord',
 'steam',
-'msiafterburner',
 'autohotkey',
 'obs-studio'
 
@@ -38,12 +39,13 @@ ForEach ($PackageName in $Packages) {
     choco upgrade $PackageName -y
 }
 
-$uninstall_update = 'google-drive-file-stream', 'vscode'
+# $uninstall_update = 'google-drive-file-stream'
+# # 'msiafterburner'
 
-ForEach ($PackageName in $uninstall_update) {
-    choco uninstall $PackageName -y
-}
+# ForEach ($PackageName in $uninstall_update) {
+#     choco uninstall $PackageName -y
+# }
 
-ForEach ($PackageName in $uninstall_update) {
-    choco upgrade $PackageName -y
-}
+# ForEach ($PackageName in $uninstall_update) {
+#     choco upgrade $PackageName -y
+# }
