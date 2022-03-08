@@ -8,3 +8,18 @@
 # sg_format -v --format --size=512 /dev/sdf
 sg_format -v --format --size=512 /dev/sdh
 
+#clearLog=true
+#argumentDescription=list of devices to format
+#argumentDefault=/dev/drive1 /dev/drive2 etc
+#argumentDefault=/dev/sdt /dev/sdu /dev/sdv /dev/sdw /dev/sdx /dev/sdy /dev/sdz
+
+for var in $1
+do
+    if sg_format $var | grep "size=520"
+    then
+        echo "$(date +%F_%T) - Formatting $var"
+        sg_format -v --format --size=512 $var
+    else
+        echo "$(date +%F_%T) - Skipping $var"
+    fi
+done
