@@ -1,0 +1,234 @@
+   - 
+   -\| 
+Name                             Id                               Version                           Available    Source
+-----------------------------------------------------------------------------------------------------------------------
+Todoist                          Doist.Todoist                    1.0.3                                          winget
+LogiOptionsPowerPointAddin       2C15990041C0A40782166403A24D0F5… 9.50.19.0                                      
+Awakened PoE Trade 2.9.1         2ea281da-028b-5d55-b26e-53163c8… 2.9.1                                          
+NVM for Windows                  40078385-F676-4C61-9A9C-F902859… Unknown                                        
+EarTrumpet                       40459File-New-Project.EarTrumpe… 2.1.9.0                                        
+FileSeek                         BinaryFortress.FileSeek          6.7.0.0                                        winget
+Around 0.55.43                   44e7f0a3-d7aa-50cf-b2e5-cc13d01… 0.55.43                                        
+Modern Pomodoro                  4750buoyantair.modern-pomodoro_… 1.0.1.0                                        
+Netflix                          4DF9E0F8.Netflix_mcm4njqhnhss8   6.98.1805.0                                    
+Visual Studio Build Tools 2017   4e060a75                         15.9.28307.1525                                
+Trader Workstation               5889-6375-8446-2021              latest (10.12.2h) 20220111 15:56…              
+LogiOptionsExcelAddin            5B9DBC017A73395321F758581D1CBC1… 9.50.19.0                                      
+Twinkle Tray                     xanderfrangos.twinkletray        1.13.11                                        winget
+7-Zip                            7zip.7zip                        21.07                                          winget
+LogiOptionsWordAddin             77F95DB8F75F35C40BD868B4D39ADCC… 9.50.19.0                                      
+LinkedIn                         7EE7776C.LinkedInforWindows_w1w… 2.0.1.0                                        
+Alteryx 2021.1 x64 (User)        Alteryx 2021.1 x64 (User)        2021.1.4.26400                                 
+Alteryx Intelligence Suite 2021… Alteryx Intelligence Suite 2021… 2021.4.1.04899                                 
+Alteryx Predictive Tools with R… Alteryx Predictive Tools with R… 4.0.5                                          
+Amazon Analytic Template         Amazon Analytic Template         2020.3                                         
+Intel® Graphics Control Panel    AppUp.IntelGraphicsControlPanel… 3.3.0.0                                        
+Intel® Graphics Command Center   AppUp.IntelGraphicsExperience_8… 1.100.3407.0                                   
+Intel® OptaneTM Memory and Stor… AppUp.IntelOptaneMemoryandStora… 18.1.1024.0                                    
+ThunderboltTM Control Center     AppUp.ThunderboltControlCenter_… 1.0.34.0                                       
+AutoHotkey                       Lexikos.AutoHotkey               1.1.33.10                                      winget
+BlueStacks X                     BlueStacks X                     0.13.2.5                                       
+BlueStacks                       BlueStack.BlueStacks             5.5.100.1040                                   winget
+Ubuntu                           Canonical.Ubuntu                 2004.2021.825.0                                winget
+DBeaver                          dbeaver.dbeaver                  21.3.3                            21.3.4       winget
+Dell Customer Connect            DellInc.DellCustomerConnect_htr… 5.3.5.0                                        
+Dell Digital Delivery            DellInc.DellDigitalDelivery_htr… 4.0.92.0                                       
+Dell SupportAssist for Home PCs  DellInc.DellSupportAssistforPCs… 3.10.7.0                                       
+Dell Update                      DellInc.DellUpdate_htrsf667h5kn2 4.4.18.0                                       
+My Dell                          DellInc.MyDell_htrsf667h5kn2     1.92.17.0                                      
+Discord                          Discord.Discord                  1.0.9003                          1.0.9004     winget
+Docker Desktop                   Docker.DockerDesktop             4.4.4                             4.5.1        winget
+Dolby Vision                     DolbyLaboratories.DolbyVisionHD… 2.1.5712.0                                     
+Dropbox                          Dropbox.Dropbox                  143.3.4082                                     winget
+Emby Theater                     EmbyMedia.EmbyTheater_svmepx4c0… 1.1.401.0                                      
+GitHub Desktop                   GitHub.GitHubDesktop             2.9.6                             2.9.9        winget
+Git                              Git.Git                          2.35.1.2                                       winget
+HWiNFO                           REALiX.HWiNFO                    7.16                              7.20         winget
+Logi Bolt                        LogiBolt                         1.2.6024.0                                     
+Logitech Options                 Logitech.Options                 9.50.269                                       winget
+Microsoft Edge Update            Microsoft Edge Update            1.3.155.77                                     
+Microsoft Edge WebView2 Runtime  Microsoft.EdgeWebView2Runtime    98.0.1108.50                      98.0.1108.55 winget
+Microsoft Visual Studio 2010 To… Microsoft Visual Studio 2010 To… 10.0.60724                                     
+Cortana                          Microsoft.549981C3F5F10_8wekyb3… 3.2111.12605.0                                 
+AV1 Video Extension              Microsoft.AV1VideoExtension_8we… 1.1.41601.0                                    
+MSN Weather                      Microsoft.BingWeather_8wekyb3d8… 4.46.32012.0                                   
+App Installer                    Microsoft.DesktopAppInstaller_8… 1.16.13405.0                                   
+Get Help                         Microsoft.GetHelp_8wekyb3d8bbwe  10.2111.43421.0                                
+Microsoft Tips                   Microsoft.Getstarted_8wekyb3d8b… 10.2112.5.0                                    
+HEIF Image Extensions            Microsoft.HEIFImageExtension_8w… 1.0.43012.0                                    
+HEVC Video Extensions from the … Microsoft.HEVCVideoExtension_8w… 1.0.43421.0                                    
+English (United Kingdom) Local … Microsoft.LanguageExperiencePac… 19041.32.96.0                                  
+MPEG-2 Video Extension           Microsoft.MPEG2VideoExtension_8… 1.0.42152.0                                    
+Paint 3D                         Microsoft.MSPaint_8wekyb3d8bbwe  6.2105.4017.0                                  
+Microsoft Messaging              Microsoft.Messaging_8wekyb3d8bb… 4.1901.10241.1000                              
+3D Viewer                        Microsoft.Microsoft3DViewer_8we… 7.2107.7012.0                                  
+Microsoft Edge                   Microsoft.MicrosoftEdge.Stable_… 98.0.1108.55                                   
+Office                           Microsoft.MicrosoftOfficeHub_8w… 18.2110.13110.0                                
+Microsoft Solitaire Collection   Microsoft.MicrosoftSolitaireCol… 4.12.1050.0                                    
+Microsoft Sticky Notes           Microsoft.MicrosoftStickyNotes_… 4.2.2.0                                        
+Mixed Reality Portal             Microsoft.MixedReality.Portal_8… 2000.21051.1282.0                              
+OneNote for Windows 10           Microsoft.Office.OneNote_8wekyb… 16001.14326.20674.0                            
+Mobile Plans                     Microsoft.OneConnect_8wekyb3d8b… 5.2011.3081.0                                  
+Microsoft Office Outlook Deskto… Microsoft.OutlookDesktopIntegra… 16009.11426.10000.0                            
+Microsoft People                 Microsoft.People_8wekyb3d8bbwe   10.2105.4.0                                    
+Print 3D                         Microsoft.Print3D_8wekyb3d8bbwe  3.3.791.0                                      
+Microsoft Remote Desktop         Microsoft.RemoteDesktop_8wekyb3… 10.2.1817.0                                    
+Snip & Sketch                    Microsoft.ScreenSketch_8wekyb3d… 10.2008.2277.0                                 
+Skype                            Microsoft.SkypeApp_kzf8qxf38zg5c 15.80.194.0                                    
+Store Experience Host            Microsoft.StorePurchaseApp_8wek… 12109.1001.10.0                                
+VP9 Video Extensions             Microsoft.VP9VideoExtensions_8w… 1.0.42791.0                                    
+Microsoft Pay                    Microsoft.Wallet_8wekyb3d8bbwe   2.4.18324.0                                    
+Web Media Extensions             Microsoft.WebMediaExtensions_8w… 1.0.42192.0                                    
+Webp Image Extensions            Microsoft.WebpImageExtension_8w… 1.0.42351.0                                    
+Microsoft Whiteboard             Microsoft.Whiteboard_8wekyb3d8b… 52.10201.5809.0                                
+Microsoft Photos                 Microsoft.Windows.Photos_8wekyb… 2021.21090.10008.0                             
+Windows Alarms & Clock           Microsoft.WindowsAlarms_8wekyb3… 10.2101.28.0                                   
+Windows Calculator               Microsoft.WindowsCalculator_8we… 10.2103.8.0                                    
+Windows Camera                   Microsoft.WindowsCamera_8wekyb3… 2021.105.10.0                                  
+Feedback Hub                     Microsoft.WindowsFeedbackHub_8w… 1.2201.61.0                                    
+Windows Maps                     Microsoft.WindowsMaps_8wekyb3d8… 10.2104.2.0                                    
+Windows Voice Recorder           Microsoft.WindowsSoundRecorder_… 10.2103.28.0                                   
+Microsoft Store                  Microsoft.WindowsStore_8wekyb3d… 22202.1402.0.0                                 
+Windows Terminal                 Microsoft.WindowsTerminal        1.11.3471.0                       1.12.10393.0 winget
+Windows Package Manager Source … Microsoft.Winget.Source_8wekyb3… 2022.218.1333.509                              
+World Oceans Day PREMIUM         Microsoft.WorldOceansDayPREMIUM… 1.0.0.0                                        
+Xbox TCUI                        Microsoft.Xbox.TCUI_8wekyb3d8bb… 1.24.10001.0                                   
+Xbox Console Companion           Microsoft.XboxApp_8wekyb3d8bbwe  48.78.15001.0                                  
+Xbox Game Bar Plugin             Microsoft.XboxGameOverlay_8weky… 1.54.4001.0                                    
+Xbox Game Bar                    Microsoft.XboxGamingOverlay_8we… 5.721.12013.0                                  
+Xbox Identity Provider           Microsoft.XboxIdentityProvider_… 12.85.31001.0                                  
+Xbox Game Speech Window          Microsoft.XboxSpeechToTextOverl… 1.21.13002.0                                   
+Your Phone                       Microsoft.YourPhone_8wekyb3d8bb… 1.21121.256.0                                  
+Groove Music                     Microsoft.ZuneMusic_8wekyb3d8bb… 10.21102.11411.0                               
+Films & TV                       Microsoft.ZuneVideo_8wekyb3d8bb… 10.21111.10511.0                               
+Monero GUI Wallet version 0.17.… Monero GUI Wallet_is1            0.17.3.1                                       
+Mozilla Firefox (x64 en-GB)      Mozilla Firefox 97.0.1 (x64 en-… 97.0.1                                         
+Mozilla Maintenance Service      MozillaMaintenanceService        94.0.1                                         
+NVIDIA Control Panel             NVIDIACorp.NVIDIAControlPanel_5… 8.1.962.0                                      
+Microsoft 365 - de-de            O365HomePremRetail - de-de       16.0.14827.20192                               
+Microsoft 365 - en-us            O365HomePremRetail - en-us       16.0.14827.20192                               
+Microsoft 365 - fr-fr            O365HomePremRetail - fr-fr       16.0.14827.20192                               
+Microsoft 365 - it-it            O365HomePremRetail - it-it       16.0.14827.20192                               
+Microsoft 365 - nl-nl            O365HomePremRetail - nl-nl       16.0.14827.20192                               
+Microsoft 365 Apps for enterpri… Microsoft.Office                 16.0.14827.20192                               winget
+OBS Studio                       OBS Studio                       27.0.0                                         
+Microsoft OneDrive               Microsoft.OneDrive               22.012.0117.0003                               winget
+Path of Building Community       Path of Building Community       1.4.170.24                                     
+Dell CinemaColor                 PortraitDisplays.DellCinemaColo… 2.4.17.0                                       
+PostgreSQL 13                    PostgreSQL 13                    13                                             
+PostgreSQL 14                    PostgreSQL.PostgreSQL            14                                             winget
+PostgreSQL 14                    PostgreSQL.PostgreSQL            9.5                               14           winget
+RSL_Helper version 3.00 (64-bit) RSL_Helper_is1                   3.00                                           
+Raspberry Pi Imager              RaspberryPiFoundation.Raspberry… 1.6.2                             1.7.1        winget
+Reader Notification Client       ReaderNotificationClient_e1rzdq… 1.0.4.0                                        
+Killer Intelligence Center       RivetNetworks.KillerControlCent… 3.1121.1109.0                                  
+Dell Free Fall Data Protection   STMicroelectronicsMEMS.DellFree… 1.0.27.0                                       
+Dell Mobile Connect 3.3          ScreenovateTechnologies.DellMob… 3.3.9809.0                                     
+Snowflake Starter Kit            Snowflake Starter Kit            2020.3                                         
+Speccy                           Piriform.Speccy                  1.32                                           winget
+Spotify Music                    SpotifyAB.SpotifyMusic_zpdnekdr… 1.178.765.0                                    
+Steam                            Valve.Steam                      2.10.91.91                                     winget
+Path of Exile                    Steam App 238960                 Unknown                                        
+TeamViewer                       TeamViewer.TeamViewer            15.26.4                                        winget
+Microsoft Teams                  Microsoft.Teams                  1.5.00.2164                                    winget
+Touch Portal                     Rils.TouchPortal                 3.0.5                             3.0.6        winget
+VLC media player                 VideoLAN.VLC                     3.0.16                                         winget
+Waves MaxxAudio Pro for Dell 20… WavesAudio.MaxxAudioProforDell2… 2.0.54.0                                       
+WhatsApp                         WhatsApp.WhatsApp                2.2202.12                                      winget
+NOW TV Player 8.9.0.0            com.bskyb.nowtvplayer_is1        8.9.0.0                                        
+Mail and Calendar                microsoft.windowscommunications… 16005.14326.20544.0                            
+Intel(R) Wireless Bluetooth(R)   {00000000-0210-1033-84C8-B8D95F… 21.00.0.4                                      
+Windows PC Health Check          Microsoft.WindowsPCHealthCheck   3.3.2110.22002                                 winget
+Microsoft Visual C++ 2013 Redis… Microsoft.VC++2013Redist-x64     12.0.40664.0                                   winget
+Realtek USB Audio                {0A46A65D-89AC-464C-8026-3CD449… 6.3.9600.2299                                  
+HellHades Artifact Extractor     {0BEB233C-BDC6-41D3-BF47-2911DE… 1.1.62.0                                       
+Dell SupportAssist Remediation   {0b3f567c-a2ee-437a-861f-bb6da9… 5.5.0.16046                                    
+PowerShell                       Microsoft.PowerShell             7.2.1.0                                        winget
+MongoDB Shell                    MongoDB.Shell                    1.1.7                                          winget
+Intel(R) Management Engine Comp… {1CEAC85D-2590-4760-800F-8DE5E9… 2117.15.0.2272                                 
+Microsoft Visual C++ 2010 x64 R… Microsoft.VC++2010Redist-x64     10.0.40219                                     winget
+Dell Mobile Connect Drivers      {1E754E2C-CF3B-42CB-B36D-D560CE… 2.0.7811                                       
+Windows SDK AddOn                {1E76DFA7-96F3-4281-8E41-8A226C… 10.1.0.0                                       
+Tableau Prep Builder 2021.4 (21… {1e73a560-53aa-4f63-b2f1-7d19c2… 21.4.18090                                     
+Epic Games Launcher              EpicGames.EpicGamesLauncher      1.3.0.0                                        winget
+RescueTime 2.16.8.2              {2505571C-03B3-4F9F-AC35-33F1CB… Unknown                                        
+GitHub CLI                       GitHub.cli                       2.5.0                             2.5.1        winget
+Java 8                           Oracle.JavaRuntimeEnvironment    8.0.3110.11                       8.0.3210.7   winget
+Google Chrome                    Google.Chrome                    98.0.4758.102                                  winget
+Microsoft Visual C++ 2015-2019 … Microsoft.VC++2015-2019Redist-x… 14.29.30139.0                                  winget
+Node.js LTS                      OpenJS.NodeJS.LTS                16.13.2                           16.14.0      winget
+Epic Online Services             {32C68D93-D32F-4B01-8250-61642B… 2.0.28.0                                       
+Private Internet Access          PrivateInternetAccess.PrivateIn… 3.2.0+06857                                    winget
+TabCommunicate version 0.5.2     {3E1C95CB-FC94-408D-87D3-F161AD… 0.5.2                                          
+psqlODBC_x64                     {3F8971B0-061B-4163-9D3F-EA9415… 09.06.0504                                     
+Dell Update for Windows Univers… {41D2D254-D869-4CD8-B440-5DF490… 4.4.0                                          
+Python Launcher                  {463B0974-B1E1-401E-8F59-B0F9F8… 3.10.7581.0                                    
+Nextcloud                        Nextcloud.NextcloudDesktop       3.4.2.20220127                                 winget
+Tableau Prep Builder 2021.3 (21… {4d8c837e-1823-4790-8816-05e2f4… 21.3.16669                                     
+Snagit 2021                      {4d991aa8-477f-46e2-8e14-d1f02f… 21.4.4.12541                                   
+Grammarly for Microsoft® Office… Grammarly.ForOffice              6.8.263                                        winget
+Dell Digital Delivery Services   {560DFD4A-23E2-45DD-A223-A4B3FA… 4.0.92.0                                       
+MongoDB Compass                  MongoDB.Compass.Full             1.30.1.0                                       winget
+MobaXterm                        {580A5A52-989C-4E8C-B60C-9AD9D7… 21.5.0.4826                                    
+Microsoft Visual C++ 2008 Redis… Microsoft.VC++2008Redist-x64     9.0.30729.6161                                 winget
+Microsoft Visual C++ 2013 Redis… Microsoft.VC++2013Redist-x64     12.0.40649.5                      12.0.40664.0 winget
+Windows Software Development Ki… {5fe95b9d-9219-4d8b-a031-71323a… 10.1.17763.132                                 
+Goodix Fingerprint Driver        {60FAB781-18F2-4D2B-A8E7-B3AADD… 2.1.32.800                                     
+Intel(R) Dynamic Platform and T… {654EE65D-FAA4-4EA6-8C07-DC94E6… 8.5.10103.7263                                 
+ThunderboltTM Software           {6653e751-8a5d-4ba0-b13d-c3a212… 1.47.0.0                                       
+Microsoft Windows Desktop Runti… Microsoft.dotnetRuntime.3-x64    3.1.22.30721                                   winget
+Google Drive                     Google.Drive                     55.0.3.0                                       winget
+DaVinci Resolve                  {6E40D3ED-077B-45C4-90FF-222CC6… 17.4.10004                                     
+Microsoft Visual Studio Install… {6F320B93-EE3C-4826-85E0-ADF79F… 2.9.3366.28650                                 
+Intel(R) Chipset Device Software {70281077-96c3-4f75-938c-dc4746… 10.1.17903.8106                                
+Microsoft Visual C++ 2005 Redis… Microsoft.VC++2005Redist-x86     8.0.61001                                      winget
+Teams Machine-Wide Installer     {731F6BAA-A986-45A4-8936-7C3AAA… 1.3.0.28779                                    
+DaVinci Resolve Control Panels   {7667C543-084F-47F7-BC60-175FC2… 2.0.1.0                                        
+Microsoft Visual Studio Code     Microsoft.VisualStudioCode       1.64.2                                         winget
+Fusion Service                   {81ce0187-37c1-4c23-8387-44454e… 1.92.22.0                                      
+Microsoft Visual C++ 2008 Redis… {8220EEFE-38CD-377E-8595-13398D… 9.0.30729                                      
+Brother MFL-Pro Suite MFC-J5910… {830F55B6-4398-4B72-A0D8-66397B… 1.1.1.0                                        
+Logi Options+                    {850cdc16-85df-4052-b06e-4e3e9e… 0.80.3597                                      
+Windows Subsystem for Linux Upd… {8BC9BA1B-F6F3-471D-8773-5283F0… 5.10.60.1                                      
+Microsoft Visual C++ 2015-2019 … Microsoft.VC++2015-2019Redist-x… 14.29.30139.0                                  winget
+Intel® OptaneTM Pinning Explore… {93989715-4970-47CC-83A0-12E014… 17.2.7.1028                                    
+Blackmagic RAW Common Components {94C42023-ECF5-46E6-ACB4-2AED53… 2.2                                            
+Bing Wallpaper                   {95736CC6-1FA4-4BD5-BE63-7724E0… 1.0.9.5                                        
+Amazon Redshift ODBC Driver 64-… {960BF695-03D5-48CF-9DC2-6AC580… 1.4.10.1000                                    
+FileBot                          PointPlanck.FileBot              4.9.4                                          winget
+Microsoft Visual C++ 2008 Redis… Microsoft.VC++2008Redist-x86     9.0.30729.6161                                 winget
+ST Microelectronics 3 Axis Digi… {9C24F411-9CA7-4A8A-91F3-F08A4A… 4.10.0093                                      
+Microsoft Visual C++ 2013 Redis… Microsoft.VC++2013Redist-x86     12.0.40664.0                                   winget
+Webex                            Cisco.WebexTeams                 42.2.0.21338                                   winget
+Adobe Acrobat Reader DC          Adobe.Acrobat.Reader.32-bit      21.001.20155                      21.011.20039 winget
+NVIDIA Graphics Driver 511.79    {B2FE1952-0186-46C3-BAEC-A80AA3… 511.79                                         
+NVIDIA GeForce Experience        Nvidia.GeForceExperience         3.25.0.84                                      winget
+NVIDIA PhysX System Software     Nvidia.PhysX                     9.21.0713                                      winget
+NVIDIA FrameView SDK 1.2.7321.3… {B2FE1952-0186-46C3-BAEC-A80AA3… 1.2.7321.30900954                              
+AWS Command Line Interface       Amazon.AWSCLI                    2.4.15.0                          2.4.19.0     winget
+Killer Performance Driver Suite… {C587FC71-0DB8-411A-8814-83A1A5… 3.0.1584                                       
+MySQL Connector/ODBC 8.0         {C9094960-C544-46C4-B1FA-A39CFC… 8.0.23                                         
+PowerShell Preview               Microsoft.PowerShell.Preview     7.3.0.1                                        winget
+Dell SupportAssist               {E0659C89-D276-4B77-A5EC-A8F2F0… 3.10.4.18                                      
+Microsoft ODBC Driver 17 for SQ… {E36FFC78-D25E-4962-872B-9CE0E5… 17.5.1.1                                       
+Asmedia USB Host Controller Dri… {E4FB0B39-C991-4EE7-95DD-1A1A78… 1.16.61.1                                      
+Zoom                             Zoom.Zoom                        5.9.3169                                       winget
+Microsoft Update Health Tools    {E876418F-BE59-4D8C-B9A5-74B056… 2.93.0.0                                       
+Microsoft Visual Studio Code     Microsoft.VisualStudioCode       1.63.2                            1.64.2       winget
+OpenVPN                          OpenVPNTechnologies.OpenVPN      2.5.028                                        winget
+Microsoft Visual C++ 2010 x86 R… Microsoft.VC++2010Redist-x86     10.0.40219                                     winget
+Realtek Audio Driver             {F132AF7F-7BCA-4EDE-8A7C-958108… 6.0.9228.1                                     
+TeraCopy                         CodeSector.TeraCopy              3.9.0                                          winget
+SnowflakeODBCDriver64Bit         {F98D4CF6-994D-48C8-8E9B-A8A443… 2.23.1                                         
+Microsoft Edge                   Microsoft.Edge                   98.0.1108.55                                   winget
+Dell OS Recovery Tool            {acf71672-21a7-4eb7-8210-1f24e6… 2.3.6096                                       
+Microsoft Visual C++ 2005 Redis… Microsoft.VC++2005Redist-x64     8.0.61000                                      winget
+Tableau                          Tableau.Desktop                  21.4.1708                                      winget
+Session Manager Plugin           Amazon.SessionManagerPlugin      1.2.295.0                                      winget
+Python 3                         Python.Python.3                  3.10.2150.0                                    winget
+Tableau                          Tableau.Desktop                  21.3.1336                         21.4.1708    winget
+Microsoft Windows Desktop Runti… Microsoft.dotnetRuntime.5-x64    5.0.14.30911                                   winget
+PowerToys (Preview)              Microsoft.PowerToys              0.55.2                                         winget
+Power Automate for desktop       {ea4de6d6-b51a-4fde-95e9-a398b6… 2.15.282.21349                                 
+Dell SupportAssist OS Recovery … {ec40a028-983b-4213-af2c-77ed6f… 5.4.1.14954                                    
+Python 3                         Python.Python.3                  3.9.5150.0                        3.10.2150.0  winget
