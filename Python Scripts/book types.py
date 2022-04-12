@@ -11,7 +11,7 @@ file_list = []
 for file in os.walk(root):
     file_list.append(file)
 
-df = DataFrame(file_list, columns = ["root", "dirs", "files"])
+df = DataFrame(file_list, columns=["root", "dirs", "files"])
 
 df.head()
 # # file_list = os.walk("directory")
