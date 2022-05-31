@@ -6,11 +6,15 @@ from shutil import move
 # ! FILL IN BELOW
 # ? folder to track e.g. Windows: "C:\\Users\\UserName\\Downloads"
 source_dir = 'C:\\Users\\paulj\\Downloads'
-dest_dir_installers = os.path.join(source_dir, 'Installers')
+dest_dir_archive = os.path.join(source_dir, 'archive')
 dest_dir_music = os.path.join(source_dir, 'music')
 dest_dir_video = os.path.join(source_dir, 'video')
 dest_dir_image = os.path.join(source_dir, 'image')
 dest_dir_documents = os.path.join(source_dir, 'documents')
+logging.info(f'Starting download_organiser.py')
+logging.info(f'{dest_dir_archive}')
+logging.info(f'{dest_dir_documents}')
+
 
 # ? supported image types
 image_extensions = [".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".gif", ".webp", ".tiff", ".tif", ".psd", ".raw", ".arw", ".cr2", ".nrw",
@@ -21,10 +25,11 @@ video_extensions = [".webm", ".mpg", ".mp2", ".mpeg", ".mpe", ".mpv", ".ogg",
 # ? supported Audio types
 audio_extensions = [".m4a", ".flac", "mp3", ".wav", ".wma", ".aac"]
 # ? supported Document types
-document_extensions = [".doc", ".docx", ".odt",
+document_extensions = [".doc", ".docx", ".odt", ".csv", ".txt", ".yxi", ".yxdb", ".yxmd", ".yxmc", 
                        ".pdf", ".xls", ".xlsx", ".ppt", ".pptx"]
 
-installer_extensions = [".exe"]
+# ? supported archive types
+archive_extensions = [".zip", ".iso", ".rar", ".7z", ".tar", ".gz", ".bz2", ".xz", ".z", ".jar", ".cab", ".dmg", ".apk", ".ipa", ".xpi", ".rpm", ".deb", ".msi", ".exe"]
 
 
 logging.basicConfig(level=logging.DEBUG, 
@@ -42,20 +47,26 @@ def make_unique(path):
     return path
 
 
+def folder_exists(folder):
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+
 def move_file(dest, entry, name):
     if os.path.exists(f"{dest}/{name}"):
         unique_name = make_unique(name)
         os.rename(entry, unique_name)
     move(entry, dest)
 
-def check_installer_files(entry, name):  # * Checks all Video Files
-    for installer_extension in installer_extensions:
-        if name.endswith(installer_extension) or name.endswith(installer_extension.upper()):
-            move_file(dest_dir_installers, entry, name)
-            logging.info(f"Moved installer file: {name}")
+def check_archive_files(entry, name):  # * Checks all Video Files
+    folder_exists(dest_dir_archive)
+    for archive_extension in archive_extensions:
+        if name.endswith(archive_extension) or name.endswith(archive_extension.upper()):
+            move_file(dest_dir_archive, entry, name)
+            logging.info(f"Moved archive file: {name}")
 
 
 def check_document_files(entry, name):  # * Checks all Video Files
+    folder_exists(dest_dir_documents)
     for document_extension in document_extensions:
         if name.endswith(document_extension) or name.endswith(document_extension.upper()):
             move_file(dest_dir_documents, entry, name)
@@ -64,7 +75,6 @@ def check_document_files(entry, name):  # * Checks all Video Files
             # self.check_audio_files(entry, name)
             # self.check_video_files(entry, name)
             # self.check_image_files(entry, name)
-            # self.check_document_files(entry, name)
 
 
 def main():
@@ -73,8 +83,9 @@ def main():
         for entry in entries:
             # print(entry.name)
             name = entry.name
-            # logging.info(f'moving installer files')
-            check_installer_files(entry, name)
+            logging.info(f'moving installer files to {dest_dir_archive}')
+            check_archive_files(entry, name)
+            logging.info(f'moving installer files to {dest_dir_documents}')
             check_document_files(entry, name)
     
 
