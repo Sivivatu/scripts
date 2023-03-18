@@ -1,0 +1,290 @@
+{
+	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate" : "2023-03-18T10:55:02.783-00:00",
+	"Sources" : 
+	[
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "Doist.Todoist"
+				},
+				{
+					"PackageIdentifier" : "Bitwarden.Bitwarden"
+				},
+				{
+					"PackageIdentifier" : "CoreyButler.NVMforWindows"
+				},
+				{
+					"PackageIdentifier" : "BinaryFortress.FileSeek"
+				},
+				{
+					"PackageIdentifier" : "xanderfrangos.twinkletray"
+				},
+				{
+					"PackageIdentifier" : "7zip.7zip"
+				},
+				{
+					"PackageIdentifier" : "ShareX.ShareX"
+				},
+				{
+					"PackageIdentifier" : "Cisco.CiscoWebexMeetings"
+				},
+				{
+					"PackageIdentifier" : "Citrix.Workspace"
+				},
+				{
+					"PackageIdentifier" : "dbeaver.dbeaver"
+				},
+				{
+					"PackageIdentifier" : "Discord.Discord"
+				},
+				{
+					"PackageIdentifier" : "Docker.DockerDesktop"
+				},
+				{
+					"PackageIdentifier" : "Dropbox.Dropbox"
+				},
+				{
+					"PackageIdentifier" : "GitHub.GitHubDesktop"
+				},
+				{
+					"PackageIdentifier" : "Git.Git"
+				},
+				{
+					"PackageIdentifier" : "REALiX.HWiNFO"
+				},
+				{
+					"PackageIdentifier" : "Logitech.Options"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal"
+				},
+				{
+					"PackageIdentifier" : "Anaconda.Miniconda3"
+				},
+				{
+					"PackageIdentifier" : "MongoDB.Compass.Full"
+				},
+				{
+					"PackageIdentifier" : "Mozilla.Firefox"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Office"
+				},
+				{
+					"PackageIdentifier" : "OBSProject.OBSStudio"
+				},
+				{
+					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.OneDrive"
+				},
+				{
+					"PackageIdentifier" : "Postman.Postman"
+				},
+				{
+					"PackageIdentifier" : "RaspberryPiFoundation.RaspberryPiImager"
+				},
+				{
+					"PackageIdentifier" : "Piriform.Speccy"
+				},
+				{
+					"PackageIdentifier" : "Valve.Steam"
+				},
+				{
+					"PackageIdentifier" : "Debian.Debian"
+				},
+				{
+					"PackageIdentifier" : "VideoLAN.VLC"
+				},
+				{
+					"PackageIdentifier" : "AntibodySoftware.WizTree"
+				},
+				{
+					"PackageIdentifier" : "code52.Carnac"
+				},
+				{
+					"PackageIdentifier" : "NOWTV.NOWTVPlayer"
+				},
+				{
+					"PackageIdentifier" : "Balena.Etcher"
+				},
+				{
+					"PackageIdentifier" : "Notion.Notion"
+				},
+				{
+					"PackageIdentifier" : "Tableau.Desktop"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.6"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.3_1"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.5"
+				},
+				{
+					"PackageIdentifier" : "Nextcloud.NextcloudDesktop"
+				},
+				{
+					"PackageIdentifier" : "RescueTime.DesktopApp"
+				},
+				{
+					"PackageIdentifier" : "Oracle.JavaRuntimeEnvironment"
+				},
+				{
+					"PackageIdentifier" : "GitHub.GitLFS"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.7"
+				},
+				{
+					"PackageIdentifier" : "PrivateInternetAccess.PrivateInternetAccess"
+				},
+				{
+					"PackageIdentifier" : "GitHub.cli"
+				},
+				{
+					"PackageIdentifier" : "Google.Chrome"
+				},
+				{
+					"PackageIdentifier" : "Cisco.WebexTeams"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerToys"
+				},
+				{
+					"PackageIdentifier" : "Grammarly.Grammarly.Office"
+				},
+				{
+					"PackageIdentifier" : "OpenVPNTechnologies.OpenVPN"
+				},
+				{
+					"PackageIdentifier" : "Mobatek.MobaXterm"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
+				},
+				{
+					"PackageIdentifier" : "Amazon.SessionManagerPlugin"
+				},
+				{
+					"PackageIdentifier" : "MongoDB.DatabaseTools"
+				},
+				{
+					"PackageIdentifier" : "Google.Drive"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86"
+				},
+				{
+					"PackageIdentifier" : "MongoDB.Shell"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Edge"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.Edge.Beta"
+				},
+				{
+					"PackageIdentifier" : "Logitech.OptionsPlus"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerShell"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
+				},
+				{
+					"PackageIdentifier" : "Adobe.Acrobat.Reader.32-bit"
+				},
+				{
+					"PackageIdentifier" : "Nvidia.PhysX"
+				},
+				{
+					"PackageIdentifier" : "Nvidia.GeForceNow"
+				},
+				{
+					"PackageIdentifier" : "Chocolatey.ChocolateyGUI"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsPCHealthCheck"
+				},
+				{
+					"PackageIdentifier" : "Amazon.AWSCLI"
+				},
+				{
+					"PackageIdentifier" : "WiresharkFoundation.Wireshark"
+				},
+				{
+					"PackageIdentifier" : "PointPlanck.FileBot"
+				},
+				{
+					"PackageIdentifier" : "Zoom.Zoom"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
+				},
+				{
+					"PackageIdentifier" : "CodeSector.TeraCopy"
+				},
+				{
+					"PackageIdentifier" : "EpicGames.EpicGamesLauncher"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
+				},
+				{
+					"PackageIdentifier" : "Python.Python.3.10"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://cdn.winget.microsoft.com/cache",
+				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name" : "winget",
+				"Type" : "Microsoft.PreIndexed.Package"
+			}
+		},
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "9P7KNL5RWT25"
+				},
+				{
+					"PackageIdentifier" : "XP8BT8DW290MPQ"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
+				"Identifier" : "StoreEdgeFD",
+				"Name" : "msstore",
+				"Type" : "Microsoft.Rest"
+			}
+		}
+	],
+	"WinGetVersion" : "1.4.10173"
+}
