@@ -111,9 +111,5 @@ $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip
 
 # Archive the files
 if ($filesToArchive.Count -gt 0) {
-    $shellApp = New-Object -ComObject Shell.Application
-    $zipFile = $shellApp.NameSpace($zipFilePath)
-    $filesToArchive | ForEach-Object {
-        $zipFile.CopyHere($_.FullName)
-    }
+    Compress-Archive -Path $filesToArchive.FullName -DestinationPath $zipFilePath
 }
