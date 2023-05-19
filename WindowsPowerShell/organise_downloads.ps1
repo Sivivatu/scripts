@@ -73,16 +73,16 @@ $extensionMapping = @{
 }
 
 # Create folders if they don't exist
-foreach ($folder in $extensionMapping.Values) {
-    $folderPath = Join-Path -Path $downloadFolder -ChildPath $folder
+foreach ($folderName in $extensionMapping.Values | Get-Unique) {
+    $folderPath = Join-Path -Path $downloadFolder -ChildPath $folderName
     if (-not (Test-Path -Path $folderPath -PathType Container)) {
         New-Item -Path $folderPath -ItemType Directory | Out-Null
     }
 }
 
 # Move files to the appropriate folders
-Get-ChildItem -Path $downloadFolder | ForEach-Object {
-    $extension = $_.Extension
+Get-ChildItem -Path $downloadFolder -File | ForEach-Object {
+    $extension = $_.Extension.ToLower()
     if ($extensionMapping.ContainsKey($extension)) {
         $destinationFolder = Join-Path -Path $downloadFolder -ChildPath $extensionMapping[$extension]
         Move-Item -Path $_.FullName -Destination $destinationFolder
@@ -104,7 +104,7 @@ if (-not (Test-Path -Path $zipFolderPath -PathType Container)) {
 }
 
 # Get the files to archive based on the cutoff date
-$filesToArchive = Get-ChildItem -Path $downloadFolder | Where-Object { $_.LastWriteTime -lt $cutoffDate }
+$filesToArchive = Get-ChildItem -Path $downloadFolder -File | Where-Object { $_.LastWriteTime -lt $cutoffDate }
 
 # Create the zip file path
 $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
@@ -117,4 +117,3 @@ if ($filesToArchive.Count -gt 0) {
         $zipFile.CopyHere($_.FullName)
     }
 }
-
