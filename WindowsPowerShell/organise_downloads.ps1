@@ -1,5 +1,5 @@
 param (
-    [string]$downloadFolder = "C:\Users\paulj\Downloads\download_test",
+    [string]$downloadFolder = "C:\Users\paulj\Downloads",
     [int]$daysToArchive = 14
 )
 
@@ -81,7 +81,7 @@ foreach ($folderName in $extensionMapping.Values | Get-Unique) {
 }
 
 # Move files to the appropriate folders
-Get-ChildItem -Path $downloadFolder -File | ForEach-Object {
+Get-ChildItem -Path $downloadFolder -File -Recurse | ForEach-Object {
     $extension = $_.Extension.ToLower()
     if ($extensionMapping.ContainsKey($extension)) {
         $destinationFolder = Join-Path -Path $downloadFolder -ChildPath $extensionMapping[$extension]
@@ -104,7 +104,7 @@ if (-not (Test-Path -Path $zipFolderPath -PathType Container)) {
 }
 
 # Get the files to archive based on the cutoff date
-$filesToArchive = Get-ChildItem -Path $downloadFolder -File | Where-Object { $_.LastWriteTime -lt $cutoffDate }
+$filesToArchive = Get-ChildItem -Path $downloadFolder -File -Recurse | Where-Object { $_.LastWriteTime -lt $cutoffDate }
 
 # Create the zip file path
 $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
