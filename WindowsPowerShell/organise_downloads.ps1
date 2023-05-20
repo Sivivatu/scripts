@@ -1,6 +1,7 @@
 param (
     [string]$downloadFolder = "C:\Users\paulj\Downloads",
     [int]$daysToArchive = 14
+    [bool]$enableLogging = $true
 )
 
 # Define file extensions and their corresponding folder names
@@ -112,7 +113,7 @@ $filesToArchive = Get-ChildItem -Path $downloadFolder -File -Recurse | Where-Obj
 # Create the zip file path
 $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
 
-# Archive the files
-if ($filesToArchive.Count -gt 0) {
-    Compress-Archive -Path $filesToArchive.FullName -DestinationPath $zipFilePath
+# Archive the files if enabled
+if ($enableArchiving -and $filesToArchive.Count -gt 0) {
+    Compress-Archive -Path $filesToArchive.FullName -DestinationPath (Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip"))
 }
