@@ -116,4 +116,11 @@ $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip
 # Archive the files if enabled
 if ($enableArchiving -and $filesToArchive.Count -gt 0) {
     Compress-Archive -Path $filesToArchive.FullName -DestinationPath (Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip"))
+
+    # Delete the files that have been added to the zip folder
+    foreach ($fileToArchive in $filesToArchive) {
+        if (Test-Path -Path $fileToArchive.FullName) {
+            Remove-Item -Path $fileToArchive.FullName -Force
+        }
+    }
 }
