@@ -103,8 +103,11 @@ if (-not (Test-Path -Path $zipFolderPath -PathType Container)) {
     New-Item -Path $zipFolderPath -ItemType Directory | Out-Null
 }
 
-# Get the files to archive based on the cutoff date
-$filesToArchive = Get-ChildItem -Path $downloadFolder -File -Recurse | Where-Object { $_.LastWriteTime -lt $cutoffDate }
+# Get the files to archive based on the cutoff date, excluding the zip folders matching the pattern Archive_yyyy_mm.zip
+$filesToArchive = Get-ChildItem -Path $downloadFolder -File -Recurse | Where-Object {
+    $_.LastWriteTime -lt $cutoffDate -and -not ($_ -is [System.IO.DirectoryInfo] -and $_.Name -like "Archive_????_??.zip")
+}
+
 
 # Create the zip file path
 $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
