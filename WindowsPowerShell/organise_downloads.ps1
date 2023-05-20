@@ -1,6 +1,6 @@
 param (
     [string]$downloadFolder = "C:\Users\paulj\Downloads",
-    [int]$daysToArchive = 14
+    [int]$daysToArchive = 14,
     [bool]$enableLogging = $true
 )
 
