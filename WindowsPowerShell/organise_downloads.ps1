@@ -114,13 +114,16 @@ $filesToArchive = Get-ChildItem -Path $downloadFolder -File -Recurse | Where-Obj
 $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
 
 # Archive the files if enabled
-if ($enableArchiving -and $filesToArchive.Count -gt 0) {
-    Compress-Archive -Path $filesToArchive.FullName -DestinationPath (Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip"))
+if ($enableArchiving) {
+    if ($filesToArchive.Count -gt 0) {
+        $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
+        Compress-Archive -Path $filesToArchive.FullName -DestinationPath $zipFilePath
 
-    # Delete the files that have been added to the zip folder
-    foreach ($fileToArchive in $filesToArchive) {
-        if (Test-Path -Path $fileToArchive.FullName) {
-            Remove-Item -Path $fileToArchive.FullName -Force
+        # Delete the files that have been added to the zip folder
+        foreach ($fileToArchive in $filesToArchive) {
+            if (Test-Path -Path $fileToArchive.FullName) {
+                Remove-Item -Path $fileToArchive.FullName -Force
+            }
         }
     }
 }
