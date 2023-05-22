@@ -14,8 +14,11 @@ if (Test-Path -Path $extensionMappingFile -PathType Leaf) {
         $extensionMapping[$mapping.Extension] = $mapping.FolderName
     }
 }
-foreach ($key in $extensionMapping.Keys) {
-    Write-Debug "Extension mapping - Extension: $key, FolderName: $($extensionMapping[$key])"
+
+if ($enableLogging) {
+    foreach ($key in $extensionMapping.Keys) {
+        Write-Debug "Extension mapping - Extension: $key, FolderName: $($extensionMapping[$key])"
+    }
 }
 
 # Create folders if they don't exist
@@ -54,46 +57,19 @@ $filesToArchive = Get-ChildItem -Path $downloadFolder -File -Recurse | Where-Obj
     $_.LastWriteTime -lt $cutoffDate -and -not ($_ -is [System.IO.DirectoryInfo] -and $_.Name -like "Archive_????_??.zip")
 }
 
-
-# Create the zip file path
-$zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
-
 # Archive the files if enabled
-# this section uses the System.IO.Compression.FileSystem assembly. Is us supposed to include the folder structure
 # FIXME: this section is not creating the zip file.
-if ($enableArchiving) {
-    # if ($filesToArchive.Count -gt 0) {
-    #     $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
+if ($enableArchiving -and $filesToArchive.Count -gt 0) {
+    $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
+    
+    # Create the zip file and add files with their relative paths
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    [System.IO.Compression.ZipFileExtensions]::CreateFromDirectory($downloadFolder, $zipFilePath, "Optimal", $true)
 
-        # Create the zip file and add files with their relative paths
-        # $filesToArchive | ForEach-Object {
-        #     $relativePath = $_.FullName.Substring($downloadFolder.Length + 1)
-            Add-Type -AssemblyName System.IO.Compression.FileSystem
-            # [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zipFilePath, $_.FullName, $relativePath)
-        }
-
-        # Delete the files that have been added to the zip folder
-        foreach ($fileToArchive in $filesToArchive) {
-            if (Test-Path -Path $fileToArchive.FullName) {
-                Remove-Item -Path $fileToArchive.FullName -Force
-            }
+    # Delete the files that have been added to the zip folder
+    foreach ($fileToArchive in $filesToArchive) {
+        if (Test-Path -Path $fileToArchive.FullName) {
+            Remove-Item -Path $fileToArchive.FullName -Force
         }
     }
 }
-
-# # Archive the files if enabled
-# if ($enableArchiving) {
-#     if ($filesToArchive.Count -gt 0) {
-#         $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
-
-#         # Create the zip file using Compress-Archive
-#         Compress-Archive -Path $filesToArchive.FullName -DestinationPath $zipFilePath -Force -CompressionLevel Optimal -Update
-
-#         # Delete the files that have been added to the zip folder
-#         foreach ($fileToArchive in $filesToArchive) {
-#             if (Test-Path -Path $fileToArchive.FullName) {
-#                 Remove-Item -Path $fileToArchive.FullName -Force
-#             }
-#         }
-#     }
-# }
