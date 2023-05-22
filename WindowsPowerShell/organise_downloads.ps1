@@ -117,7 +117,13 @@ $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip
 if ($enableArchiving) {
     if ($filesToArchive.Count -gt 0) {
         $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
-        Compress-Archive -Path $filesToArchive.FullName -DestinationPath $zipFilePath
+
+        # Create the zip file and add files with their relative paths
+        $filesToArchive | ForEach-Object {
+            $relativePath = $_.FullName.Substring($downloadFolder.Length + 1)
+            Add-Type -AssemblyName System.IO.Compression.FileSystem
+            [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zipFilePath, $_.FullName, $relativePath)
+        }
 
         # Delete the files that have been added to the zip folder
         foreach ($fileToArchive in $filesToArchive) {
