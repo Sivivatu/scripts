@@ -1,8 +1,16 @@
+# param (
+#     [string]$downloadFolder = "C:\Users\paulj\Downloads",
+#     [int]$daysToArchive = 14,
+#     [bool]$enableLogging = $true,
+#     [string]$extensionMappingFile = ".\WindowsPowerShell\extensionMapping.csv"
+# )
+
 param (
-    [string]$downloadFolder = "C:\Users\paulj\Downloads",
-    [int]$daysToArchive = 14,
+    [string]$downloadFolder = "C:\Users\paulj\Downloads\download_test",
+    [int]$daysToArchive = 1,
     [bool]$enableLogging = $true,
     [string]$extensionMappingFile = ".\WindowsPowerShell\extensionMapping.csv"
+    [bool]$enableArchiving = $true
 )
 
 # Define file extensions and their corresponding folder names
