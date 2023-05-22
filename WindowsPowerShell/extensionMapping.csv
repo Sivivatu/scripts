@@ -1,0 +1,57 @@
+Extension,FolderName
+.yxdb,Alteryx Files
+.yxmc,Alteryx Files
+.yxmd,Alteryx Files
+.yxi,Alteryx Files
+.zip,Archives
+.iso,Archives
+.7z,Archives
+.tar,Archives
+.gz,Archives
+.msi,Archives
+.exe,Archives
+.jpg,Images
+.jpeg,Images
+.jpe,Images
+.jif,Images
+.jfif,Images
+.jfi,Images
+.png,Images
+.gif,Images
+.webp,Images
+.tiff,Images
+.tif,Images
+.psd,Images
+.raw,Images
+.arw,Images
+.cr2,Images
+.nrw,Images
+.k25,Images
+.bmp,Images
+.dib,Images
+.heif,Images
+.heic,Images
+.ind,Images
+.indd,Images
+.indt,Images
+.jp2,Images
+.j2k,Images
+.jpf,Images
+.jpx,Images
+.jpm,Images
+.mj2,Images
+.svg,Images
+.svgz,Images
+.ai,Images
+.eps,Images
+.ico,Images
+.pdf,Document Files
+.txt,Document Files
+.doc,Document Files
+.docx,Document Files
+.odt,Document Files
+.csv,Document Files
+.xls,Document Files
+.xlsx,Document Files
+.ppt,Document Files
+.pptx,Document Files

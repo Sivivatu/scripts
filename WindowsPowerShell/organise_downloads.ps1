@@ -1,76 +1,21 @@
 param (
     [string]$downloadFolder = "C:\Users\paulj\Downloads",
     [int]$daysToArchive = 14,
-    [bool]$enableLogging = $true
+    [bool]$enableLogging = $true,
+    [string]$extensionMappingFile = ".\WindowsPowerShell\extensionMapping.csv"
 )
 
 # Define file extensions and their corresponding folder names
-$extensionMapping = @{
-    # Alteryx Files
-    ".yxdb" = "Alteryx Files"
-    ".yxmc" = "Alteryx Files"
-    ".yxmd" = "Alteryx Files"
-    ".yxi" = "Alteryx Files"
-    
-    # Archive Files
-    ".zip" = "Archives"
-    ".iso"  = "Archives"
-    ".7z"  = "Archives"
-    ".tar"  = "Archives"
-    ".gz"  = "Archives"
-    ".msi"  = "Archives"
-    ".exe"  = "Archives"
-    
-    # Images
-    ".jpg" = "Images"
-    ".jpeg"	= "Images"
-    ".jpe" = "Images"
-    ".jif" = "Images"
-    ".jfif" = "Images"
-    ".jfi"	= "Images"
-    ".png" = "Images"
-    ".gif"	= "Images"
-    ".webp"	= "Images"
-    ".tiff"	= "Images"
-    ".tif"	= "Images"
-    ".psd"	= "Images"
-    ".raw"	= "Images"
-    ".arw" = "Images"
-    ".cr2"	= "Images"
-    ".nrw"	= "Images"
-    ".k25"	= "Images"
-    ".bmp"	= "Images"
-    ".dib"	= "Images"
-    ".heif"	= "Images"
-    ".heic" = "Images"
-    ".ind"	= "Images"
-    ".indd"	= "Images"
-    ".indt"	= "Images"
-    ".jp2"	= "Images"
-    ".j2k"	= "Images"
-    ".jpf"	= "Images"
-    ".jpx"	= "Images"
-    ".jpm"	= "Images"
-    ".mj2"	= "Images"
-    ".svg"	= "Images"
-    ".svgz"	= "Images"
-    ".ai"	= "Images"
-    ".eps" = "Images"
-    ".ico" = "Images"
-    
-    # Documents and spreadsheets
-    ".pdf" = "Document Files"
-    ".txt" = "Document Files"
-    ".doc" = "Document Files"
-    ".docx" = "Document Files"
-    ".odt" = "Document Files"
-    ".csv" = "Document Files"
-    ".xls" = "Document Files"
-    ".xlsx" = "Document Files"
-    ".ppt" = "Document Files"
-    ".pptx" = "Document Files"
-    
-    # Add more extensions and folder names as needed
+$extensionMapping = @{}
+
+if (Test-Path -Path $extensionMappingFile -PathType Leaf) {
+    $extensionMappingData = Import-Csv -Path $extensionMappingFile
+    foreach ($mapping in $extensionMappingData) {
+        $extensionMapping[$mapping.Extension] = $mapping.FolderName
+    }
+}
+foreach ($key in $extensionMapping.Keys) {
+    Write-Debug "Extension mapping - Extension: $key, FolderName: $($extensionMapping[$key])"
 }
 
 # Create folders if they don't exist
@@ -113,17 +58,36 @@ $filesToArchive = Get-ChildItem -Path $downloadFolder -File -Recurse | Where-Obj
 # Create the zip file path
 $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
 
+# # Archive the files if enabled
+# # this section uses the System.IO.Compression.FileSystem assembly. Is us supposed to include the folder structure
+# # FIXME: this section is not creating the zip file.
+# if ($enableArchiving) {
+#     if ($filesToArchive.Count -gt 0) {
+#         $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
+
+#         # Create the zip file and add files with their relative paths
+#         $filesToArchive | ForEach-Object {
+#             $relativePath = $_.FullName.Substring($downloadFolder.Length + 1)
+#             Add-Type -AssemblyName System.IO.Compression.FileSystem
+#             [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zipFilePath, $_.FullName, $relativePath)
+#         }
+
+#         # Delete the files that have been added to the zip folder
+#         foreach ($fileToArchive in $filesToArchive) {
+#             if (Test-Path -Path $fileToArchive.FullName) {
+#                 Remove-Item -Path $fileToArchive.FullName -Force
+#             }
+#         }
+#     }
+# }
+
 # Archive the files if enabled
 if ($enableArchiving) {
     if ($filesToArchive.Count -gt 0) {
         $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
 
-        # Create the zip file and add files with their relative paths
-        $filesToArchive | ForEach-Object {
-            $relativePath = $_.FullName.Substring($downloadFolder.Length + 1)
-            Add-Type -AssemblyName System.IO.Compression.FileSystem
-            [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zipFilePath, $_.FullName, $relativePath)
-        }
+        # Create the zip file using Compress-Archive
+        Compress-Archive -Path $filesToArchive.FullName -DestinationPath $zipFilePath -Force -CompressionLevel Optimal -Update
 
         # Delete the files that have been added to the zip folder
         foreach ($fileToArchive in $filesToArchive) {
