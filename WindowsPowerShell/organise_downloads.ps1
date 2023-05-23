@@ -61,13 +61,8 @@ $filesToArchive = Get-ChildItem -Path $downloadFolder -File -Recurse | Where-Obj
 # Archive the files if enabled
 if ($enableArchiving -and $filesToArchive.Count -gt 0) {
     $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
-    
-    # # Create the zip file and add files with their relative paths
-    # Compress-Archive -Path $filesToArchive.FullName -DestinationPath $zipFilePath -CompressionLevel Optimal -Force
-    # # Add-Type -AssemblyName System.IO.Compression.FileSystem
-    # # [System.IO.Compression.ZipFileExtensions]::CreateFromDirectory($downloadFolder, $zipFilePath, "Optimal", $true)
 
-        # Create the zip file by compressing the entire $downloadFolder
+    # Create the zip file by compressing the entire $downloadFolder
     Compress-Archive -Path $downloadFolder -DestinationPath $zipFilePath -CompressionLevel Optimal -Force
     
     # Remove the $downloadFolder from the zip file
