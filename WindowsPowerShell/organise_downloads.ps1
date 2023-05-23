@@ -42,7 +42,16 @@ Get-ChildItem -Path $downloadFolder -File -Recurse | ForEach-Object {
         $destinationFolder = Join-Path -Path $downloadFolder -ChildPath $extensionMapping[$extension]
         Move-Item -Path $_.FullName -Destination $destinationFolder
     }
+    elseif ($_.DirectoryName -notlike "$downloadFolder\*") {
+        # Ignore files outside the $downloadFolder
+        Write-Warning "File $($_.FullName) is outside the download folder and will be ignored."
+    }
+    else {
+        # Ignore files without a matching extension in the mapping
+        Write-Warning "File $($_.FullName) does not have a matching extension in the mapping and will be ignored."
+    }
 }
+
 
 # Determine the cutoff date for archiving
 $cutoffDate = (Get-Date).AddDays(-$daysToArchive)
