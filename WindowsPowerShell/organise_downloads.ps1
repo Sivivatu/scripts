@@ -1,6 +1,6 @@
 param (
     [string]$downloadFolder = "C:\Users\paulj\Downloads\download_test",
-    [int]$daysToArchive = 1,
+    [int]$daysToArchive = 14,
     [bool]$enableLogging = $true,
     [string]$extensionMappingFile = "C:\Users\paulj\OneDrive\Documents\scripts\WindowsPowerShell\extensionMapping.csv",
     [bool]$enableArchiving = $true,
