@@ -48,7 +48,7 @@ $zipFolderName = "Archive_" + (Get-Date).ToString("yyyy_MM")
 
 # Create the zip folder path
 $zipFolderPath = Join-Path -Path $downloadFolder -ChildPath $archiveFolderName
-$logFilePath = Join-Path -Path $zipFolderPath -ChildPath $zipFolderName + ".log"
+$logFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".log")
 
 # Create the zip folder if it doesn't exist
 if (-not (Test-Path -Path $zipFolderPath -PathType Container)) {
