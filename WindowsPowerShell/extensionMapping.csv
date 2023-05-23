@@ -1,57 +1,58 @@
 Extension,FolderName
-.yxdb,Alteryx Files
-.yxmc,Alteryx Files
-.yxmd,Alteryx Files
-.yxi,Alteryx Files
-.zip,Archives
-.iso,Archives
-.7z,Archives
-.tar,Archives
-.gz,Archives
-.msi,Archives
-.exe,Archives
-.jpg,Images
-.jpeg,Images
-.jpe,Images
-.jif,Images
-.jfif,Images
-.jfi,Images
-.png,Images
-.gif,Images
-.webp,Images
-.tiff,Images
-.tif,Images
-.psd,Images
-.raw,Images
-.arw,Images
-.cr2,Images
-.nrw,Images
-.k25,Images
-.bmp,Images
-.dib,Images
-.heif,Images
-.heic,Images
-.ind,Images
-.indd,Images
-.indt,Images
-.jp2,Images
-.j2k,Images
-.jpf,Images
-.jpx,Images
-.jpm,Images
-.mj2,Images
-.svg,Images
-.svgz,Images
-.ai,Images
-.eps,Images
-.ico,Images
-.pdf,Document Files
-.txt,Document Files
-.doc,Document Files
-.docx,Document Files
-.odt,Document Files
-.csv,Document Files
-.xls,Document Files
-.xlsx,Document Files
-.ppt,Document Files
-.pptx,Document Files
+.yxdb,1_Alteryx_Files
+.yxmc,1_Alteryx_Files
+.yxmd,1_Alteryx_Files
+.yxi,1_Alteryx_Files
+.yxzp,1_Alteryx_Files
+.zip,2_Archives
+.iso,2_Archives
+.7z,2_Archives
+.tar,2_Archives
+.gz,2_Archives
+.msi,2_Archives
+.exe,2_Archives
+.jpg,3_Images
+.jpeg,3_Images
+.jpe,3_Images
+.jif,3_Images
+.jfif,3_Images
+.jfi,3_Images
+.png,3_Images
+.gif,3_Images
+.webp,3_Images
+.tiff,3_Images
+.tif,3_Images
+.psd,3_Images
+.raw,3_Images
+.arw,3_Images
+.cr2,3_Images
+.nrw,3_Images
+.k25,3_Images
+.bmp,3_Images
+.dib,3_Images
+.heif,3_Images
+.heic,3_Images
+.ind,3_Images
+.indd,3_Images
+.indt,3_Images
+.jp2,3_Images
+.j2k,3_Images
+.jpf,3_Images
+.jpx,3_Images
+.jpm,3_Images
+.mj2,3_Images
+.svg,3_Images
+.svgz,3_Images
+.ai,3_Images
+.eps,3_Images
+.ico,3_Images
+.pdf,4_Document_Files
+.txt,4_Document_Files
+.doc,4_Document_Files
+.docx,4_Document_Files
+.odt,4_Document_Files
+.csv,4_Document_Files
+.xls,4_Document_Files
+.xlsx,4_Document_Files
+.ppt,4_Document_Files
+.pptx,4_Document_Files
