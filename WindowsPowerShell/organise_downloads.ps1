@@ -3,7 +3,8 @@ param (
     [int]$daysToArchive = 1,
     [bool]$enableLogging = $true,
     [string]$extensionMappingFile = ".\WindowsPowerShell\extensionMapping.csv",
-    [bool]$enableArchiving = $true
+    [bool]$enableArchiving = $true,
+    [string]$archiveFolderName = "Archive"
 )
 
 # Define file extensions and their corresponding folder names
@@ -46,7 +47,8 @@ $cutoffDate = (Get-Date).AddDays(-$daysToArchive)
 $zipFolderName = "Archive_" + (Get-Date).ToString("yyyy_MM")
 
 # Create the zip folder path
-$zipFolderPath = Join-Path -Path $downloadFolder -ChildPath $zipFolderName
+$zipFolderPath = Join-Path -Path $downloadFolder -ChildPath $archiveFolderName
+$logFilePath = Join-Path -Path $zipFolderPath -ChildPath $zipFolderName + ".log"
 
 # Create the zip folder if it doesn't exist
 if (-not (Test-Path -Path $zipFolderPath -PathType Container)) {
@@ -96,3 +98,16 @@ if ($enableArchiving -and $filesToArchive.Count -gt 0) {
         }
     }
 }
+
+# Create the log message with folder counts
+$logMessage = "Script execution completed on $(Get-Date)`n"
+
+# Loop through each folder in the extension mapping
+foreach ($folderName in $extensionMapping.Values | Get-Unique) {
+    $folderPath = Join-Path -Path $downloadFolder -ChildPath $folderName
+    $fileCount = @(Get-ChildItem -Path $folderPath -File).Count
+    $logMessage += "Folder: $folderPath, File Count: $fileCount`n"
+}
+
+# Append the log message to the log file
+$logMessage | Out-File -FilePath $logFilePath -Append
