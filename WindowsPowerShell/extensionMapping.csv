@@ -4,6 +4,7 @@ Extension,FolderName
 .yxmd,1_Alteryx_Files
 .yxi,1_Alteryx_Files
 .yxzp,1_Alteryx_Files
+.bz2,2_Archives
 .zip,2_Archives
 .iso,2_Archives
 .7z,2_Archives
@@ -56,3 +57,4 @@ Extension,FolderName
 .xlsx,4_Document_Files
 .ppt,4_Document_Files
 .pptx,4_Document_Files
+.ics,5_Calendar_Files
