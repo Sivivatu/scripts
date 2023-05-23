@@ -10,7 +10,7 @@ param (
 $logFilePath = Join-Path -Path $downloadFolder -ChildPath $archiveFolderName
 $logFile = Join-Path -path $logFilePath -ChildPath ("Archive_" + (Get-Date).ToString("yyyy_MM_dd") + ".log")
 
-Start-Transcript -Path $logFilePath -Append
+Start-Transcript -Path $logFile -Append
 # Define file extensions and their corresponding folder names
 $extensionMapping = @{}
 
@@ -115,14 +115,16 @@ if ($enableArchiving -and $filesToArchive.Count -gt 0) {
 $logMessage = "Script execution completed on $(Get-Date)`n"
 
 # Loop through each folder in the extension mapping
-foreach ($folderName in $extensionMapping.Values | Get-Unique) {
+$uniqueFolders = $extensionMapping.Values | ForEach-Object { $_.ToLower() } | Select-Object -Unique | Sort-Object
+foreach ($folderName in $uniqueFolders) {
     $folderPath = Join-Path -Path $downloadFolder -ChildPath $folderName
     $fileCount = @(Get-ChildItem -Path $folderPath -File).Count
     $logMessage += "Folder: $folderPath, File Count: $fileCount`n"
 }
 
-# Append the log message to the log file
-$logMessage | Out-File -FilePath $logFilePath -Append
+
+Write-Output $logMessage
 
 Stop-Transcript
-```
+
+$logMessage | Out-File -FilePath $logFile -Append
