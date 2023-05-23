@@ -1,15 +1,8 @@
-# param (
-#     [string]$downloadFolder = "C:\Users\paulj\Downloads",
-#     [int]$daysToArchive = 14,
-#     [bool]$enableLogging = $true,
-#     [string]$extensionMappingFile = ".\WindowsPowerShell\extensionMapping.csv"
-# )
-
 param (
     [string]$downloadFolder = "C:\Users\paulj\Downloads\download_test",
     [int]$daysToArchive = 1,
     [bool]$enableLogging = $true,
-    [string]$extensionMappingFile = ".\WindowsPowerShell\extensionMapping.csv"
+    [string]$extensionMappingFile = ".\WindowsPowerShell\extensionMapping.csv",
     [bool]$enableArchiving = $true
 )
 
@@ -66,13 +59,24 @@ $filesToArchive = Get-ChildItem -Path $downloadFolder -File -Recurse | Where-Obj
 }
 
 # Archive the files if enabled
-# FIXME: this section is not creating the zip file.
 if ($enableArchiving -and $filesToArchive.Count -gt 0) {
     $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
     
-    # Create the zip file and add files with their relative paths
-    Add-Type -AssemblyName System.IO.Compression.FileSystem
-    [System.IO.Compression.ZipFileExtensions]::CreateFromDirectory($downloadFolder, $zipFilePath, "Optimal", $true)
+    # # Create the zip file and add files with their relative paths
+    # Compress-Archive -Path $filesToArchive.FullName -DestinationPath $zipFilePath -CompressionLevel Optimal -Force
+    # # Add-Type -AssemblyName System.IO.Compression.FileSystem
+    # # [System.IO.Compression.ZipFileExtensions]::CreateFromDirectory($downloadFolder, $zipFilePath, "Optimal", $true)
+
+        # Create the zip file by compressing the entire $downloadFolder
+    Compress-Archive -Path $downloadFolder -DestinationPath $zipFilePath -CompressionLevel Optimal -Force
+    
+    # Remove the $downloadFolder from the zip file
+    $zip = [System.IO.Compression.ZipFile]::Open($zipFilePath, 'Update')
+    $zipEntry = $zip.GetEntry($downloadFolder)
+    if ($zipEntry) {
+        $zipEntry | % { $zip.RemoveEntry($_) }
+    }
+    $zip.Dispose()
 
     # Delete the files that have been added to the zip folder
     foreach ($fileToArchive in $filesToArchive) {
