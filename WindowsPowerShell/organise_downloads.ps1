@@ -1,5 +1,5 @@
 param (
-    [string]$downloadFolder = "C:\Users\paulj\Downloads\download_test",
+    [string]$downloadFolder = "C:\Users\paulj\Downloads",
     [int]$daysToArchive = 14,
     [bool]$enableLogging = $true,
     [string]$extensionMappingFile = "C:\Users\paulj\OneDrive\Documents\scripts\WindowsPowerShell\extensionMapping.csv",
@@ -7,6 +7,10 @@ param (
     [string]$archiveFolderName = "Archives"
 )
 
+$logFilePath = Join-Path -Path $downloadFolder -ChildPath $archiveFolderName
+$logFile = Join-Path -path $logFilePath -ChildPath ("Archive_" + (Get-Date).ToString("yyyy_MM_dd") + ".log")
+
+Start-Transcript -Path $logFilePath -Append
 # Define file extensions and their corresponding folder names
 $extensionMapping = @{}
 
@@ -48,7 +52,6 @@ $zipFolderName = "Archive_" + (Get-Date).ToString("yyyy_MM")
 
 # Create the zip folder path
 $zipFolderPath = Join-Path -Path $downloadFolder -ChildPath $archiveFolderName
-$logFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".log")
 
 # Create the zip folder if it doesn't exist
 if (-not (Test-Path -Path $zipFolderPath -PathType Container)) {
@@ -111,3 +114,6 @@ foreach ($folderName in $extensionMapping.Values | Get-Unique) {
 
 # Append the log message to the log file
 $logMessage | Out-File -FilePath $logFilePath -Append
+
+Stop-Transcript
+```
