@@ -4,7 +4,7 @@ param (
     [bool]$enableLogging = $true,
     [string]$extensionMappingFile = ".\WindowsPowerShell\extensionMapping.csv",
     [bool]$enableArchiving = $true,
-    [string]$archiveFolderName = "Archive"
+    [string]$archiveFolderName = "Archives"
 )
 
 # Define file extensions and their corresponding folder names
