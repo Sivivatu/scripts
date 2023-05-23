@@ -55,23 +55,39 @@ if (-not (Test-Path -Path $zipFolderPath -PathType Container)) {
 
 # Get the files to archive based on the cutoff date, excluding the zip folders matching the pattern Archive_yyyy_mm.zip
 $filesToArchive = Get-ChildItem -Path $downloadFolder -File -Recurse | Where-Object {
-    $_.LastWriteTime -lt $cutoffDate -and -not ($_ -is [System.IO.DirectoryInfo] -and $_.Name -like "Archive_????_??.zip")
+    $_.LastWriteTime -lt $cutoffDate -and -not ($_ -is [System.IO.DirectoryInfo] -and $_.Name -like "Archive_????_??.zip") -and $_.FullName -notlike "$zipFolderPath\*"
 }
 
 # Archive the files if enabled
 if ($enableArchiving -and $filesToArchive.Count -gt 0) {
     $zipFilePath = Join-Path -Path $zipFolderPath -ChildPath ($zipFolderName + ".zip")
+    $tempFolder = Join-Path -Path $downloadFolder -ChildPath "TempArchive"
 
-    # Create the zip file by compressing the entire $downloadFolder
-    Compress-Archive -Path $downloadFolder -DestinationPath $zipFilePath -CompressionLevel Optimal -Force
-    
-    # Remove the $downloadFolder from the zip file
-    $zip = [System.IO.Compression.ZipFile]::Open($zipFilePath, 'Update')
-    $zipEntry = $zip.GetEntry($downloadFolder)
-    if ($zipEntry) {
-        $zipEntry | % { $zip.RemoveEntry($_) }
+    # Create the temporary archive folder if it doesn't exist
+    if (-not (Test-Path -Path $tempFolder -PathType Container)) {
+        New-Item -Path $tempFolder -ItemType Directory | Out-Null
     }
-    $zip.Dispose()
+
+    # Move the files to archive into the temporary folder while preserving relative paths
+    foreach ($file in $filesToArchive) {
+        $relativePath = $file.FullName.Substring($downloadFolder.Length + 1)
+        $destinationPath = Join-Path -Path $tempFolder -ChildPath $relativePath
+
+        # Create the destination folder if it doesn't exist
+        $destinationFolder = Split-Path -Path $destinationPath
+        if (-not (Test-Path -Path $destinationFolder -PathType Container)) {
+            New-Item -Path $destinationFolder -ItemType Directory | Out-Null
+        }
+
+        # Move the file to the temporary folder
+        Move-Item -Path $file.FullName -Destination $destinationPath
+    }
+
+    # Create the zip file by compressing the temporary folder
+    Compress-Archive -Path $tempFolder -DestinationPath $zipFilePath -CompressionLevel Optimal -Force
+
+    # Remove the temporary folder
+    Remove-Item -Path $tempFolder -Force -Recurse
 
     # Delete the files that have been added to the zip folder
     foreach ($fileToArchive in $filesToArchive) {
